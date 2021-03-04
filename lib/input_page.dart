@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'constants.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
-
-const Color activeCardColor = Color(0xFF1D1E33);
-const Color inactiveCardColor = Color(0xFF111328);
-const Color bottomContainerColor = Color(0xFFEB1555);
 
 enum Gender { male, female }
 
@@ -35,8 +32,8 @@ class _InputPageState extends State<InputPage> {
                     });
                   },
                   colour: selectedGender == Gender.male
-                      ? activeCardColor
-                      : inactiveCardColor,
+                      ? kActiveCardColor
+                      : kInactiveCardColor,
                   cardChild: IconContent(
                     label: 'Male',
                     icon: FontAwesomeIcons.mars,
@@ -51,8 +48,8 @@ class _InputPageState extends State<InputPage> {
                     });
                   },
                   colour: selectedGender == Gender.female
-                      ? activeCardColor
-                      : inactiveCardColor,
+                      ? kActiveCardColor
+                      : kInactiveCardColor,
                   cardChild: IconContent(
                     label: 'Female',
                     icon: FontAwesomeIcons.venus,
@@ -62,17 +59,17 @@ class _InputPageState extends State<InputPage> {
             ],
           ),
         ),
-        Expanded(child: ReusableCard(colour: activeCardColor)),
+        Expanded(child: ReusableCard(colour: kActiveCardColor)),
         Expanded(
           child: Row(
             children: [
-              Expanded(child: ReusableCard(colour: activeCardColor)),
-              Expanded(child: ReusableCard(colour: activeCardColor)),
+              Expanded(child: ReusableCard(colour: kActiveCardColor)),
+              Expanded(child: ReusableCard(colour: kActiveCardColor)),
             ],
           ),
         ),
         Container(
-          color: bottomContainerColor,
+          color: kBottomContainerColor,
           margin: EdgeInsets.only(top: 10.0),
           width: double.infinity,
           height: 80.0,

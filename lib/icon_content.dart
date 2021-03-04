@@ -14,6 +14,7 @@ class IconContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: 10.0),
         Icon(
           icon,
           size: 80.0,
